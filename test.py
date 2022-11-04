@@ -2,6 +2,7 @@ import numpy as np
 import joblib
 import os
 import cv2
+from sklearn.metrics import classification_report
 
 
 def sigmoid(z):
@@ -44,28 +45,28 @@ def Softmax_forward(x, weights, biases):
                    + biases)
 
 
-def accuracy(weights_file, model, testing_data):
+def report(weights_file, model, testing_data):
     weights = joblib.load(weights_file)['weights']
     biases = joblib.load(weights_file)['biases']
     results = []
     if model == 'FCN':
-        results = [(np.argmax(FCN_forward(x, weights, biases)), y)
+        results = [[np.argmax(FCN_forward(x, weights, biases)), y]
                    for (x, y) in testing_data]
 
     elif model == 'Softmax':
-        results = [(np.argmax(Softmax_forward(x, weights, biases)), y)
+        results = [[np.argmax(Softmax_forward(x, weights, biases)), y]
                    for (x, y) in testing_data]
 
-    return sum(int(x == y) for (x, y) in results) / len(testing_data)
+    y_pred = np.array(results)[:, 0]
+    y_true = np.array(results)[:, 1]
+    return classification_report(y_true, y_pred, target_names=[str(i) for i in range(10)])
 
 
 if __name__ == "__main__":
     fn = './MNIST_Dataset/test_images'
-    w_file = './weights_softmax.pt'
+    w_file = './weights_FCN_CE_L2_01.pt'
     test_data = test_dataloader(fn)
 
-    acc = accuracy(w_file, 'Softmax', test_data)
+    r = report(w_file, 'FCN', test_data)
 
-    print("The accuracy is: %.2f%%" % (acc * 100))
-
-
+    print(r)
