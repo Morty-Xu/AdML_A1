@@ -67,28 +67,28 @@ jpg格式的MNIST数据集。
 
 - Softmax + 交叉熵
 
-![SoftmaxCE](/Users/morty/CodeProject/AdML_A1/pictures/SoftmaxCE.png)
+![SoftmaxCE](https://github.com/Morty-Xu/AdML_A1/blob/main/pictures/SoftmaxCE.png)
 
 - Softmax + 交叉熵 + L1 + 0.1 lmbda
 
-![Softmax_CE_L1_0.1](/Users/morty/CodeProject/AdML_A1/pictures/Softmax_CE_L1_0.1.png)
+![Softmax_CE_L1_0.1](https://github.com/Morty-Xu/AdML_A1/blob/main/pictures/Softmax_CE_L1_0.1.png)
 
 - Softmax + 交叉熵 + L2 + 0.1 lmbda
 
-![Softmax_CE_L2_01](/Users/morty/CodeProject/AdML_A1/pictures/Softmax_CE_L2_01.png)
+![Softmax_CE_L2_01](https://github.com/Morty-Xu/AdML_A1/blob/main/pictures/Softmax_CE_L2_01.png)
 
 - FCN + 均方误差
 
-![FCN_Qu](/Users/morty/CodeProject/AdML_A1/pictures/FCN_Qu.png)
+![FCN_Qu](https://github.com/Morty-Xu/AdML_A1/blob/main/pictures/FCN_Qu.png)
 
 - FCN + 交叉熵
 
-![FCN_CE](/Users/morty/CodeProject/AdML_A1/pictures/FCN_CE.png)
+![FCN_CE](https://github.com/Morty-Xu/AdML_A1/blob/main/pictures/FCN_CE.png)
 
 - FCN + 交叉熵 + L1 + 0.1 lmbda
 
-![FCN_CE_L1_01](/Users/morty/CodeProject/AdML_A1/pictures/FCN_CE_L1_01.png)
+![FCN_CE_L1_01](https://github.com/Morty-Xu/AdML_A1/blob/main/pictures/FCN_CE_L1_01.png)
 
-- FCN + 交叉熵 + L1 + 0.1 lmbda
+- FCN + 交叉熵 + L2 + 0.1 lmbda
 
-![FCN_CE_L2_01](/Users/morty/CodeProject/AdML_A1/pictures/FCN_CE_L2_01.png)
+![FCN_CE_L2_01](https://github.com/Morty-Xu/AdML_A1/blob/main/pictures/FCN_CE_L2_01.png)
